@@ -1,0 +1,10 @@
+<style>
+.logo{display: inline-block; vertical-align:middle; margin-right: 10px; width: 100px; height: 100px;}
+body{background-color: #8fd3fe;}
+.row{display:flex;  justify-content: center; margin-bottom: 02px;}
+.coloumn{flex-basis: 50%; flex-direction: column; align-items: center;}
+.coloumn:last-child{margin-right: 0;}
+
+input[type='text']{width: 100%;padding: 10px;color: black; background-color:	#add8e6;}
+.btn-primary{background-color: #526fef; justify-content: center; align-items:center;margin-left: 500px;}
+</style>

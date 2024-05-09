@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML Deployment using FlaskAPI</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+ <div class="login">
+  <img src="D:\Beinex\Python\Tasks\22.FlaskAPI\5569615.png" alt="Logo" class="logo">
+	<h1>Predict whether your customer churned or not!</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+     <form action="{{ url_for('predict')}}"method="post">
+      <div class="row">
+        <div class="coloumn">
+          <input type="text" name="DataPlan" placeholder="DataPlan" required="required" />
+          <input type="text" name="DataUsage" placeholder="DataUsage" required="required" />
+          <input type="text" name="CustServCalls" placeholder="CustServCalls" required="required" />
+          <input type="text" name="DayMins" placeholder="DayMins" required="required" />
+          <input type="text" name="DayCalls" placeholder="DayCalls" required="required" />
+          <input type="text" name="MonthlyCharge" placeholder="MonthlyCharge" required="required" />
+          <input type="text" name="OverageFee" placeholder="OverageFee" required="required" />
+
+        </div>
+      </div> 
+		  <button type="submit" class="btn btn-primary btn-block btn-large" style="color: white;">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+</body>
+</html>
